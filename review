@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reviews — Grizz's Emporium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Css/base.css">
+  <link rel="stylesheet" href="../Css/nav.css">
+  <link rel="stylesheet" href="../Css/review.css">
+  <link rel="stylesheet" href="../Css/modal.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+  <div class="nav-spacer"></div>
+
+  <div class="nav-links">
+    <a class="nav-pill is-active" href="review.html">Reviews</a>
+    <a class="nav-pill" href="products.html">Products</a>
+    <a class="nav-pill" href="index.html">Home</a>
+    <a class="nav-pill" href="contact.html">Contact</a>
+    <a class="nav-pill" href="tos.html">Terms of service</a>
+  </div>
+
+  <button class="nav-pill nav-cart" id="cartPill" type="button">Cart (0)</button>
+</nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <h1 class="title">Customer Reviews</h1>
+      <p class="subtitle">See what our customers are saying</p>
+      <div class="rating-summary">
+        <div class="summary-stars">★★★★★</div>
+        <div class="summary-text">4.7 out of 5 based on 2,143 reviews</div>
+      </div>
+    </section>
+
+    <section class="breakdown-section" aria-label="Rating breakdown">
+      <div class="breakdown-row"><span class="breakdown-label">5★</span><div class="breakdown-track"><span class="breakdown-fill" style="width:77%"></span></div><span class="breakdown-count">1,650</span></div>
+      <div class="breakdown-row"><span class="breakdown-label">4★</span><div class="breakdown-track"><span class="breakdown-fill" style="width:14%"></span></div><span class="breakdown-count">310</span></div>
+      <div class="breakdown-row"><span class="breakdown-label">3★</span><div class="breakdown-track"><span class="breakdown-fill" style="width:6%"></span></div><span class="breakdown-count">120</span></div>
+      <div class="breakdown-row"><span class="breakdown-label">2★</span><div class="breakdown-track"><span class="breakdown-fill" style="width:2%"></span></div><span class="breakdown-count">40</span></div>
+      <div class="breakdown-row"><span class="breakdown-label">1★</span><div class="breakdown-track"><span class="breakdown-fill" style="width:1%"></span></div><span class="breakdown-count">23</span></div>
+    </section>
+
+    <section class="imported-note" id="importedNote">
+      <strong>Imported from Grizz's Vouches.html:</strong>
+      <span id="importedCount">0</span> verified entries are included on this page.
+    </section>
+
+    <section class="review-filters" aria-label="Review filters">
+      <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="5">5★</button>
+      <button type="button" class="filter-btn" data-filter="4">4★</button>
+      <button type="button" class="filter-btn" data-filter="discord-import">Discord Import</button>
+      <button type="button" class="filter-btn" data-filter="netflix">Netflix</button>
+      <button type="button" class="filter-btn" data-filter="spotify">Spotify</button>
+      <button type="button" class="filter-btn" data-filter="discord">Discord</button>
+    </section>
+
+    <section class="reviews-section" id="reviewsList"></section>
+
+    <section class="proof-section">
+      <h2 class="section-title">Customer Proof Gallery</h2>
+      <div class="proof-grid">
+        <article class="proof-card">
+          <div class="proof-image">Discord Ticket Screenshot</div>
+          <p>Customer-shared ticket with personal info hidden.</p>
+        </article>
+        <article class="proof-card">
+          <div class="proof-image">Payment Confirmation</div>
+          <p>Payment receipt screenshot with sensitive details blurred.</p>
+        </article>
+        <article class="proof-card">
+          <div class="proof-image">Thank-you Message</div>
+          <p>Post-delivery confirmation from a verified customer.</p>
+        </article>
+      </div>
+      <a class="review-cta" href="contact.html">Want to leave a review?</a>
+    </section>
+
+    <section class="external-section">
+      <h2 class="section-title">External Validation</h2>
+      <p class="external-text">Public review profiles and badges can be linked here as they become available.</p>
+      <div class="external-links">
+        <a class="external-link" href="contact.html">Trustpilot Profile</a>
+        <a class="external-link" href="contact.html">Google Reviews</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box" id="modalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <button class="modal-back" id="modalBack" type="button" aria-label="Back">←</button>
+        <h2 id="modalTitle">Cart</h2>
+        <button class="modal-close" id="closeModal" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="../Js/review.js" defer></script>
+
+  <!-- global cart scripts -->
+  <script src="../Js/utils.js" defer></script>
+  <script src="../Js/cart.js" defer></script>
+  <script src="../Js/modal.js" defer></script>
+  <script src="../Js/checkout.js" defer></script>
+</body>
+</html>
