@@ -1,0 +1,90 @@
+/* 0) RESET + VARIABLES (GLOBAL) */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg1:#070611;
+  --bg2:#0b0820;
+  --glow:#c77dff;
+  --glow2:#7df9ff;
+  --card:rgba(180,120,255,.16);
+  --card-border:rgba(220,180,255,.55);
+  --text:#f4f0ff;
+  --muted:rgba(244,240,255,.78);
+}
+
+/* 1) BACKGROUND (GLOBAL) */
+body{
+  min-height:100vh;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  overflow-x:hidden;
+  background:
+    radial-gradient(1000px 500px at 20% 10%, rgba(199,125,255,0.22), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(125,249,255,0.12), transparent 60%),
+    radial-gradient(800px 500px at 55% 85%, rgba(199,125,255,0.18), transparent 60%),
+    linear-gradient(180deg,var(--bg1),var(--bg2));
+  position:relative;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.55;
+  width:2px;height:2px;background:white;
+  box-shadow:
+    5vw 10vh white,18vw 22vh rgba(255,255,255,.9),
+    27vw 70vh rgba(255,255,255,.8),35vw 45vh rgba(255,255,255,.9),
+    42vw 15vh rgba(255,255,255,.7),55vw 30vh rgba(255,255,255,.85),
+    62vw 80vh rgba(255,255,255,.75),73vw 18vh rgba(255,255,255,.9),
+    82vw 60vh rgba(255,255,255,.8),90vw 25vh rgba(255,255,255,.95);
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:-20%;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(199,125,255,0.18), transparent 45%),
+    radial-gradient(circle at 70% 55%, rgba(125,249,255,0.10), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(199,125,255,0.14), transparent 45%);
+  filter:blur(18px);
+  opacity:.75;
+}
+
+/* Shared layout (GLOBAL, not nav) */
+.page{
+  max-width:1100px;
+  margin:0 auto;
+  padding:18px 16px 60px;
+  position:relative;
+  z-index:1;
+}
+.hero{
+  text-align:center;
+  padding:52px 0 30px;
+}
+.title{
+  font-size:clamp(50px,7vw,90px);
+  font-weight:900;
+  letter-spacing:1px;
+  background:linear-gradient(90deg,#fff,#c77dff,#7df9ff,#fff);
+  background-size:250% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 0 15px rgba(199,125,255,.6)) drop-shadow(0 0 30px rgba(125,249,255,.4));
+  animation:shine 3s linear infinite;
+}
+@keyframes shine{0%{background-position:0% 50%}100%{background-position:220% 50%}}
+.subtitle{
+  margin-top:14px;
+  font-size:clamp(18px,2.5vw,26px);
+  font-weight:600;
+  color:var(--muted);
+  text-shadow:0 0 10px rgba(199,125,255,.2);
+}
+
+/* 9) RESPONSIVE (GLOBAL) */
+@media (max-width:900px){
+  .hero{padding:40px 0 22px}
+}

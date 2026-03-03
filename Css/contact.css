@@ -1,0 +1,225 @@
+.contact-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 18px 56px;
+}
+
+.status-pill {
+  margin: 18px auto 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 249, 255, 0.3);
+  background: rgba(12, 10, 28, 0.82);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 12px rgba(74, 222, 128, 0.75);
+}
+
+.status-sep {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 24px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.contact-card {
+  background: rgba(139, 92, 246, 0.1);
+  border: 2px solid rgba(199, 125, 255, 0.3);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  transition: all .25s ease;
+}
+
+.contact-card-primary {
+  border-color: rgba(125, 249, 255, 0.42);
+  background: rgba(125, 249, 255, 0.12);
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(199, 125, 255, 0.68);
+}
+
+.contact-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.contact-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #c77dff;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contact-metrics {
+  margin-top: 10px;
+  color: #7df9ff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-link {
+  display: inline-block;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 16px;
+  border: 2px solid rgba(199, 125, 255, 0.35);
+  border-radius: 10px;
+  transition: all .25s ease;
+  background: rgba(199, 125, 255, 0.16);
+}
+
+.contact-link:hover {
+  background: rgba(199, 125, 255, 0.28);
+  border-color: #c77dff;
+}
+
+.priority-box,
+.safety-box,
+.contact-form-wrap,
+.business-info,
+.faq-shortcut {
+  margin-top: 18px;
+  background: rgba(139, 92, 246, 0.06);
+  border: 2px solid rgba(199, 125, 255, 0.22);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.contact-form-wrap {
+  margin-top: 0;
+}
+
+.priority-box h2,
+.safety-box h2,
+.contact-form-wrap h2,
+.business-info h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #c77dff;
+  margin-bottom: 10px;
+}
+
+.priority-box p,
+.contact-form-wrap p,
+.faq-shortcut p {
+  color: rgba(255, 255, 255, 0.84);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.priority-box ul,
+.safety-box ul {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(12, 10, 28, 0.78);
+  color: var(--text);
+  padding: 11px 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(199, 125, 255, 0.9);
+  box-shadow: 0 0 0 2px rgba(199, 125, 255, 0.16);
+}
+
+.contact-submit {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #c77dff, #7df9ff);
+  color: #000;
+  font-weight: 900;
+  padding: 13px 14px;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  filter: brightness(1.05);
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.business-grid div {
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(12, 10, 28, 0.74);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.faq-shortcut {
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-pill {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
