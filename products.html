@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Products — Grizz's Emporium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../Css/base.css">
+  <link rel="stylesheet" href="../Css/nav.css">
+  <link rel="stylesheet" href="../Css/products.css">
+  <link rel="stylesheet" href="../Css/modal.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <div class="nav-spacer"></div>
+
+      <div class="nav-links">
+        <a class="nav-pill" href="review.html">Reviews</a>
+        <a class="nav-pill is-active" href="products.html">Products</a>
+        <a class="nav-pill" href="index.html">Home</a>
+        <a class="nav-pill" href="contact.html">Contact</a>
+        <a class="nav-pill" href="tos.html">Terms of service</a>
+      </div>
+
+      <button class="nav-pill nav-cart" id="cartPill" type="button">Cart (0)</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <h1 class="title">Products</h1>
+      <p class="subtitle">Choose a category to view offers</p>
+    </section>
+
+    <section class="category-grid">
+      <button class="category-card" data-category="subscriptions">
+        <h2>Subscriptions</h2>
+        <p>25+ platforms, affordable plans</p>
+      </button>
+
+      <button class="category-card" data-category="games">
+        <h2>Games</h2>
+        <p>Popular titles & in-game currency</p>
+      </button>
+
+      <button class="category-card" data-category="services">
+        <h2>Services</h2>
+        <p>Digital help for games & platforms</p>
+      </button>
+    </section>
+  </main>
+
+  <!-- GLOBAL MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box" id="modalBox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <button class="modal-back" id="modalBack" type="button" aria-label="Back">←</button>
+        <h2 id="modalTitle">Offers</h2>
+        <button class="modal-close" id="closeModal" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- scripts (ORDER matters) -->
+  <script src="../Js/data.js" defer></script>
+  <script src="../Js/utils.js" defer></script>
+  <script src="../Js/cart.js" defer></script>
+  <script src="../Js/modal.js" defer></script>
+  <script src="../Js/checkout.js" defer></script>
+  <script src="../Js/products.js" defer></script>
+</body>
+</html>
